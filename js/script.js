@@ -115,7 +115,7 @@ const mensajesNo = [
 
     "Si tu no quieres dile a Alika mejor eh 😆",
 
-    "Si tu no quieres dile a Alika mejor eh 😆"
+    "No es por nada pero el botón de sí se ve más amigable 😁"
 ];
 
 const mascotas = [
@@ -381,7 +381,7 @@ tarjetasActividad.forEach(tarjeta => {
             case "Frappe":
 
                 mensajeActividad.innerText =
-                    "A ver si no nos toca la misma mesera que nos echo jaja 😌";
+                    "A ver si no nos toca la misma mesera que nos echo jaja 🥤";
                 break;
 
             case "Fotos":
