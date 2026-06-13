@@ -115,7 +115,7 @@ const mensajesNo = [
 
     "Estoy empezando a pensar que sí quieres salir 😏",
 
-    "Bueno... ya entendimos la indirecta 😆"
+    "Si tu no quieres dile a Alika mejor eh 😆"
 ];
 
 const mascotas = [
@@ -278,19 +278,19 @@ horaInput.addEventListener("change", () => {
     else if (hora < 10) {
 
         mensaje =
-            "Hora bastante razonable para comenzar una aventura ☀️";
+            "Otra vez al señor taco? ☀️";
 
     }
     else if (hora < 14) {
 
         mensaje =
-            "Perfecto para desayunar algo rico 😋";
+            "A mi parecer ta bien 😋";
 
     }
     else if (hora < 18) {
 
         mensaje =
-            "Excelente horario para una salida relajada 😎";
+            "Un poco fuera de la zona de comfort eh 😎";
 
     }
     else if (hora < 22) {
@@ -302,7 +302,7 @@ horaInput.addEventListener("change", () => {
     else {
 
         mensaje =
-            "Esto ya se está poniendo interesante 🌙";
+            "Crees que te den permiso? 🌙";
     }
 
     mensajeHora.innerText = mensaje;
@@ -369,13 +369,13 @@ tarjetasActividad.forEach(tarjeta => {
             case "Cine":
 
                 mensajeActividad.innerText =
-                    "Prometo no preguntar el final antes de que termine la película 🍿";
+                    "Prometo no llorar 🍿";
                 break;
 
             case "Paseo":
 
                 mensajeActividad.innerText =
-                    "La moto ya fue informada de la misión 🏍️";
+                    "Ca cao siempre listo para un viaje 🏍️";
                 break;
 
             case "Frappe":
@@ -387,13 +387,13 @@ tarjetasActividad.forEach(tarjeta => {
             case "Fotos":
 
                 mensajeActividad.innerText =
-                    "Advertencia: podrían obtenerse fotos dignas de perfil 📸";
+                    "Advertencia: No soy fotografo jaja📸";
                 break;
 
             case "Caminar":
 
                 mensajeActividad.innerText =
-                    "A veces los planes simples terminan siendo los mejores ✨";
+                    "Bueno para la salud xd ✨";
                 break;
         }
 
@@ -454,31 +454,31 @@ tarjetasComida.forEach(tarjeta => {
             case "Pizza":
 
                 mensajeComida.innerText =
-                    "Difícil equivocarse con pizza 🍕";
+                    "Pizza, la mejor opcion despues de la hamburgesa 🍕";
                 break;
 
             case "Tacos":
 
                 mensajeComida.innerText =
-                    "Una elección con mucho nivel 🌮";
+                    "Esto ya comimos en tu cumple 🌮";
                 break;
 
             case "Hamburguesa":
 
                 mensajeComida.innerText =
-                    "Clásica, efectiva y deliciosa 🍔";
+                    "Perfección, Clásica, efectiva y deliciosa 🍔";
                 break;
 
             case "Sushi":
 
                 mensajeComida.innerText =
-                    "El comité aprueba esta elección elegante 🍣";
+                    "No es mi favorito, pero puedo hacer una excepción 🍣";
                 break;
 
             case "Frappe":
 
                 mensajeComida.innerText =
-                    "Una opción tranquila y muy agradable 🥤";
+                    "A ver si no nos vuelven a echar jaja 🥤";
                 break;
         }
 
