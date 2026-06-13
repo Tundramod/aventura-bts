@@ -113,7 +113,7 @@ const mensajesNo = [
 
     "El departamento de negativas cerró hoy 😂",
 
-    "Estoy empezando a pensar que sí quieres salir 😏",
+    "Si tu no quieres dile a Alika mejor eh 😆",
 
     "Si tu no quieres dile a Alika mejor eh 😆"
 ];
@@ -381,7 +381,7 @@ tarjetasActividad.forEach(tarjeta => {
             case "Frappe":
 
                 mensajeActividad.innerText =
-                    "Buena conversación y algo rico para tomar, difícil fallar 😌";
+                    "A ver si no nos toca la misma mesera que nos echo jaja 😌";
                 break;
 
             case "Fotos":
