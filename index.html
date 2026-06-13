@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aventura BTS</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- BIENVENIDA -->
+
+    <div id="pantallaBienvenida" class="pantalla">
+
+        <div class="contenedor">
+
+            <img src="img/bts/bts.png" class="grupo" alt="BTS">
+
+            <h1>
+                Preparate para una experiencia increible
+            </h1>
+
+            <div class="barra-contenedor">
+
+                <div id="barra"></div>
+
+            </div>
+
+            <p id="mensaje">
+                Preparandoló todo...
+            </p>
+
+            <button id="btnMusica"
+        class="btn-si">
+
+    🎵 Activar música BTSiana
+</button>
+
+<audio id="musica">
+    <source src="sonidos/bts.mp3"
+            type="audio/mpeg">
+</audio>
+<br>
+            <button id="btnComenzar" onclick="mostrarPregunta()">
+
+                Comenzar
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- PREGUNTA PRINCIPAL -->
+
+    <div id="pantallaPregunta" class="pantalla oculta">
+
+        <div class="contenedor">
+
+            <div class="progreso-general">
+
+                <div id="progresoPaso" class="progreso-relleno">
+
+                </div>
+
+            </div>
+
+            <p class="texto-paso">
+                Paso 1 de 6
+            </p>
+
+            <img src="img/bt21/cooky.png" class="mascota" id="mascotaPregunta">
+
+            <h1>
+                Se detectó un posible plan
+            </h1>
+
+            <p id="mensajeNo">
+                ¿Te gustaría ayudar a planearlo?
+            </p>
+
+            <div class="botones">
+
+                <button id="btnSi" class="btn-si">
+
+                    Sí
+
+                </button>
+
+                <button id="btnNo" class="btn-no">
+
+                    No
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="pantallaFecha" class="pantalla oculta">
+
+        <div class="contenedor">
+
+            <div class="progreso-general">
+
+                <div class="progreso-relleno" style="width:33%;">
+
+                </div>
+
+            </div>
+
+            <p class="texto-paso">
+                Paso 2 de 6
+            </p>
+
+            <img src="img/bts/jin.png" class="personaje-principal">
+
+            <h1>
+                Elige un día para el plan
+            </h1>
+
+            <p>
+                Jin necesita saber cuándo estás disponible.
+            </p>
+
+            <input type="date" id="fechaSeleccionada" class="campo-fecha">
+            <p id="mensajeFecha" class="mensaje-dinamico"></p>
+
+            <br>
+
+            <button id="btnFecha" class="btn-si">
+
+                Continuar
+
+            </button>
+
+        </div>
+        
+
+
+    </div>
+    <div id="pantallaHora" class="pantalla oculta">
+
+            <div class="contenedor">
+
+                <div class="progreso-general">
+
+                    <div class="progreso-relleno" style="width:50%;">
+
+                    </div>
+
+                </div>
+
+                <p class="texto-paso">
+                    Paso 3 de 6
+                </p>
+
+                <img src="img/bts/suga.png" class="personaje-principal">
+
+                <h1>
+                    ¿A qué hora comenzamos?
+                </h1>
+
+                <p>
+                    SUGA necesita coordinar los horarios.
+                </p>
+
+                <input type="time" id="horaSeleccionada" class="campo-fecha">
+
+                <p id="mensajeHora" class="mensaje-dinamico">
+
+                </p>
+
+                <br>
+
+                <button id="btnHora" class="btn-si">
+
+                    Continuar
+
+                </button>
+
+            </div>
+
+        </div>
+        <div id="pantallaActividad"
+     class="pantalla oculta">
+
+    <div class="contenedor">
+
+        <div class="progreso-general">
+
+            <div class="progreso-relleno"
+                 style="width:66%;">
+
+            </div>
+
+        </div>
+
+        <p class="texto-paso">
+            Paso 4 de 6
+        </p>
+
+        <img src="img/bts/v.png"
+             class="personaje-principal">
+
+        <h1>
+            Ha llegado el momento más importante
+        </h1>
+
+        <p>
+            ¿Qué tipo de aventura te gustaría?
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta actividad"
+                 data-actividad="Cine">
+
+                <span class="emoji">🎬</span>
+
+                <h3>Cine</h3>
+
+            </div>
+
+            <div class="tarjeta actividad"
+                 data-actividad="Paseo">
+
+                <span class="emoji">🏍️</span>
+
+                <h3>Paseo</h3>
+
+            </div>
+
+            <div class="tarjeta actividad"
+                 data-actividad="Frappe">
+
+                <span class="emoji">🥤</span>
+
+                <h3>Frappe</h3>
+
+            </div>
+
+            <div class="tarjeta actividad"
+                 data-actividad="Fotos">
+
+                <span class="emoji">📷</span>
+
+                <h3>Tomar fotos</h3>
+
+            </div>
+
+            <div class="tarjeta actividad"
+                 data-actividad="Caminar">
+
+                <span class="emoji">🌳</span>
+
+                <h3>Caminar</h3>
+
+            </div>
+
+        </div>
+
+        <p id="mensajeActividad"
+           class="mensaje-dinamico">
+
+        </p>
+
+        <button id="btnActividad"
+                class="btn-si">
+
+            Continuar
+
+        </button>
+
+    </div>
+
+</div>
+<div id="pantallaComida"
+     class="pantalla oculta">
+
+    <div class="contenedor">
+
+        <div class="progreso-general">
+
+            <div class="progreso-relleno"
+                 style="width:83%;">
+
+            </div>
+
+        </div>
+
+        <p class="texto-paso">
+            Paso 5 de 6
+        </p>
+
+        <img src="img/bts/jimin.png"
+             class="personaje-principal">
+
+        <h1>
+            El comité culinario necesita tu ayuda
+        </h1>
+
+        <p>
+            ¿Qué se te antoja?
+        </p>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta comida"
+                 data-comida="Pizza">
+
+                <span class="emoji">🍕</span>
+
+                <h3>Pizza</h3>
+
+            </div>
+
+            <div class="tarjeta comida"
+                 data-comida="Tacos">
+
+                <span class="emoji">🌮</span>
+
+                <h3>Tacos</h3>
+
+            </div>
+
+            <div class="tarjeta comida"
+                 data-comida="Hamburguesa">
+
+                <span class="emoji">🍔</span>
+
+                <h3>Hamburguesa</h3>
+
+            </div>
+
+            <div class="tarjeta comida"
+                 data-comida="Sushi">
+
+                <span class="emoji">🍣</span>
+
+                <h3>Sushi</h3>
+
+            </div>
+
+            <div class="tarjeta comida"
+                 data-comida="Frappe">
+
+                <span class="emoji">🥤</span>
+
+                <h3>Frappe</h3>
+
+            </div>
+
+        </div>
+
+        <p id="mensajeComida"
+           class="mensaje-dinamico">
+
+        </p>
+
+        <button id="btnComida"
+                class="btn-si">
+
+            Ver resumen
+
+        </button>
+
+    </div>
+
+</div>
+<div id="pantallaResumen"
+     class="pantalla oculta">
+
+    <div class="contenedor">
+
+        <div class="progreso-general">
+
+            <div class="progreso-relleno"
+                 style="width:100%;">
+
+            </div>
+
+        </div>
+
+        <p class="texto-paso">
+            Paso 6 de 6
+        </p>
+
+        <img src="img/bts/jungkook.png"
+             class="personaje-principal">
+
+        <h1>
+            Resumen del plan
+        </h1>
+
+        <div id="resumenFinal">
+
+        </div>
+
+        <button id="btnConfirmar"
+                class="btn-si">
+
+            Confirmar plan
+        </button>
+
+    </div>
+
+</div>
+ <div id="pantallaFinal"
+     class="pantalla oculta">
+
+     <div class="contenedor">
+
+        <img src="img/bts/bts.png"
+             class="grupo"
+             alt="BTS">
+
+        <h1>
+            Plan planeado
+        </h1>
+
+        <p id="mensajeFinal">
+
+            Analizando respuestas...
+
+        </p>
+
+        <div id="resultadoFinal">
+            <br>
+
+
+
+        </div>
+<button id="btnWhatsapp"
+        class="btn-si">
+
+    💜 Enviar plan aprobado
+
+</button>
+       </div>
+
+ </div>
+ <audio id="audioClick">
+    <source src="sonidos/click.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="audioSuccess">
+    <source src="sonidos/success.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="audioConfetti">
+    <source src="sonidos/confetti.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="musica">
+    <source src="sonidos/bts.mp3" type="audio/mpeg">
+</audio>
+ <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
